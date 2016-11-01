@@ -130,27 +130,70 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         
-        switch (central.state) {
-        case CBCentralManagerState.poweredOff:
-            self.clearDevices()
-            
-        case CBCentralManagerState.unauthorized:
-            // Indicate to user that the iOS device does not support BLE.
-            break
-            
-        case CBCentralManagerState.unknown:
-            // Wait for another event
-            break
-            
-        case CBCentralManagerState.poweredOn:
-           // self.startScanning()
-            break
-        case CBCentralManagerState.resetting:
-            self.clearDevices()
-            
-        case CBCentralManagerState.unsupported:
-            break
+        if #available(iOS 10.0, *)
+        {
+            switch (central.state) {
+                
+            case CBManagerState.poweredOff:
+                self.clearDevices()
+                
+            case CBManagerState.unauthorized:
+                // Indicate to user that the iOS device does not support BLE.
+               
+                break
+                
+            case CBManagerState.unknown:
+                // Wait for another event
+              
+                break
+                
+            case CBManagerState.poweredOn:
+                
+                
+              //  self.centralManager!.scanForPeripheralsWithServices([CBUUID(string:TRANSFER_UUID)], options:[CBCentralManagerScanOptionAllowDuplicatesKey: false])
+                break
+            case CBManagerState.resetting:
+                self.clearDevices()
+                
+            case CBManagerState.unsupported:
+                
+                break
+            }
         }
+        else
+        {
+            
+            switch central.state.rawValue
+            {
+            case 0: // CBCentralManagerState.Unknown
+            
+                break
+                
+            case 1: // CBCentralManagerState.Resetting
+                self.clearDevices()
+                
+                
+            case 2:// CBCentralManagerState.Unsupported
+           
+                break
+                
+            case 3: // CBCentralManagerState.unauthorized
+        
+                break
+                
+            case 4: // CBCentralManagerState.poweredOff:
+                self.clearDevices()
+                
+            case 5: //CBCentralManagerState.poweredOn:
+         //       self.centralManager!.scanForPeripheralsWithServices([CBUUID(string:TRANSFER_UUID)], options:[CBCentralManagerScanOptionAllowDuplicatesKey: false])
+                break
+                
+            default:break
+            }
+            
+        }
+        
+        
     }
     
 

@@ -33,7 +33,7 @@ class PlayerCell: UITableViewCell {
       let nf = NumberFormatter()
       nf.numberStyle = .none
         var strBuild:String = ""
-      strBuild = nf.string(from: NSNumber(player.pos))!
+      strBuild = nf.string(from: NSNumber(value: player.pos))!
       strBuild += "%"
       positionLabel.text = strBuild
       gameLabel.text = player.game

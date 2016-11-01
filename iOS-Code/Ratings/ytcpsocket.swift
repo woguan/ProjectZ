@@ -103,7 +103,8 @@ open class TCPServer:YSocket{
             let tcpClient:TCPClient=TCPClient()
             tcpClient.fd=clientfd
             tcpClient.port=Int(port)
-            if let addr=String(CString: buff, encoding: String.Encoding.utf8){
+            
+            if let addr=String(cString: buff, encoding: String.Encoding.utf8){
                 tcpClient.addr=addr
             }
             return tcpClient

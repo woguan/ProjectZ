@@ -103,8 +103,15 @@ class BTService: NSObject, CBPeripheralDelegate {
             //print(positionCharacteristic.description)
             // Need a mutable var to pass to writeValue function
             var mutablePos = position
-            let data = Data(bytes: UnsafePointer<UInt8>(&mutablePos), count: sizeof(UInt8))
-            self.peripheral?.writeValue(data, for: positionCharacteristic, type: CBCharacteristicWriteType.withoutResponse)
+            
+            
+       //    let s = UnsafePointer<UInt8>(UnsafePointer(&mutablePos))
+  
+            
+            let data = NSData(bytes: &mutablePos, length: MemoryLayout<UInt8>.size)
+            
+            
+            self.peripheral?.writeValue(data as Data, for: positionCharacteristic, type: CBCharacteristicWriteType.withoutResponse)
             
         }
     }
