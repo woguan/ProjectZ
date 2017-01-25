@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InitialSetupViewController: UIViewController {
+class UserChoiceSetupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,24 +22,27 @@ class InitialSetupViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-       print ("moving to next scene")
-        guard let configurationSettingViewController = segue.destination as? ConfigurationViewController else{
-            print ("SHOULD NOT REACH HERE")
+        guard let navi = segue.destination as? UINavigationController else {
+            print ("Should not reach here [1]")
             fatalError()
         }
-        //configurationSettingViewController.num = 2
-        print ("prepare calling: ", segue.destination)
+        
+        guard let configurationSettingViewController =  navi.viewControllers[0] as? ConfigurationViewController else{
+            print ("Should not reach here [2]")
+            fatalError()
+        }
+        
+        // set up user choice
+        configurationSettingViewController.setUserChoice(option: DirectionChoice)
         
     }
     @IBAction func counterClock(_ sender: UIButton) {
-        
-        
+        DirectionChoice = .Counterclockwise
         self.performSegue(withIdentifier: "configuration", sender: nil)
     }
     
     @IBAction func clockwise(_ sender: UIButton) {
-        
+        DirectionChoice = .Clockwise
         self.performSegue(withIdentifier: "configuration", sender: nil)
     }
     

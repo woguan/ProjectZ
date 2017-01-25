@@ -202,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="-2220" y="-362"/>
         </scene>
-        <!--New Setting View Controller-->
+        <!--Initial Setting View Controller-->
         <scene sceneID="Spf-2X-9I5">
             <objects>
-                <viewController id="twk-mA-8Mv" customClass="NewSettingViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="twk-mA-8Mv" customClass="InitialSettingViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eKQ-EW-6FP"/>
                         <viewControllerLayoutGuide type="bottom" id="Jd2-Pa-Yx2"/>
@@ -245,7 +245,7 @@
         <!--Configure-->
         <scene sceneID="rnd-KA-7PL">
             <objects>
-                <viewController title="Configure" id="bcr-Wk-HLa" customClass="InitialSetupViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Configure" id="bcr-Wk-HLa" customClass="UserChoiceSetupViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="raK-P2-gBd"/>
                         <viewControllerLayoutGuide type="bottom" id="l33-sG-7Bf"/>
@@ -328,11 +328,17 @@
                                 <rect key="frame" x="16" y="382" width="156" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ic_rotate_left_48pt"/>
+                                <connections>
+                                    <action selector="Counterclock:" destination="r5Y-5I-Bc6" eventType="touchUpInside" id="n14-V9-T0W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLG-E0-RgA">
                                 <rect key="frame" x="203" y="382" width="156" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ic_rotate_right_48pt"/>
+                                <connections>
+                                    <action selector="Clockwise:" destination="r5Y-5I-Bc6" eventType="touchUpInside" id="LoF-BV-HSw"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I8w-rP-xoT">
                                 <rect key="frame" x="14" y="315" width="347" height="31"/>
@@ -361,6 +367,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="clockwiseButton" destination="qLG-E0-RgA" id="a5z-sl-RXi"/>
+                        <outlet property="counterclockButton" destination="4bm-Sk-pVK" id="TM4-ZV-Tz8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="189-TP-3JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -401,19 +411,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-Rg-O1Q">
-                                            <rect key="frame" x="28" y="8" width="287" height="43"/>
+                                            <rect key="frame" x="28" y="8" width="286" height="43"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wlU-SE-qOz">
-                                                    <rect key="frame" x="0.0" y="3" width="287" height="37.5"/>
+                                                    <rect key="frame" x="0.0" y="3" width="286" height="37.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qU2-sC-RPL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSo-Ls-uVG">
-                                                            <rect key="frame" x="0.0" y="20.5" width="287" height="17"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="286" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -684,7 +694,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cP1-Vk-aXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130" y="-81"/>
+            <point key="canvasLocation" x="3167" y="-81"/>
         </scene>
     </scenes>
     <resources>

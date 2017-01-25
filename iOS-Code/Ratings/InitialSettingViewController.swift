@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewSettingViewController: UIViewController {
+class InitialSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,9 @@ class NewSettingViewController: UIViewController {
     @IBAction func unwindToNewSettingViewController(_ segue: UIStoryboardSegue){
      print ("unwinded")
         
-        // RESET ALL SMIN/SMAX OF DEVICE
         
+        DirectionChoice = .None
         
+        // Todo: RESET ALL SMIN/SMAX OF DEVICE 
     }
 }

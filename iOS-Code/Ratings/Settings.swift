@@ -6,4 +6,13 @@
 //  Copyright © 2017 Guan Wong. All rights reserved.
 //
 
+enum Choice{
+    case Clockwise
+    case Counterclockwise
+    case None
+}
+
+
 var NewUser:Bool = true
+
+var DirectionChoice:Choice!

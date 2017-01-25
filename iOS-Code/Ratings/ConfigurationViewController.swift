@@ -9,26 +9,41 @@
 import UIKit
 
 
-enum Choice{
-    case Clockwise
-    case Counterclockwise
-}
+
 
 class ConfigurationViewController: UIViewController {
-
+    var option:Choice!
     
-   // var option:Choice!
-   // var num:Int!
+    @IBOutlet weak var counterclockButton: UIButton!
+    
+    @IBOutlet weak var clockwiseButton: UIButton!
+    
+    @IBAction func Counterclock(_ sender: UIButton) {
+        print ("counter clockwise pressed")
+    }
+    @IBAction func Clockwise(_ sender: UIButton) {
+        print ("clockwise pressed")
+    }
     
     func setUserChoice(option:Choice){
-      //  self.option = option
+        self.option = option
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//print("num is: ", num)
-  print("here")
-        // Do any additional setup after loading the view.
+        
+        guard let option = self.option else {
+            return
+        }
+        switch option {
+        case .Clockwise:
+            counterclockButton.isEnabled = false
+        case .Counterclockwise:
+            clockwiseButton.isEnabled = false
+        case .None:
+            print ("should not reach here")
+            fatalError()
+        }
     }
 
     override func didReceiveMemoryWarning() {
