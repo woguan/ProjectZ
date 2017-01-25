@@ -31,8 +31,6 @@ class ViewController: UIViewController {
             }
     }
     
-    // test
-    
     @IBAction func blueBut(_ sender: UIButton) {
         serial.startScanning()
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ViewController.connectTimeOut), userInfo: nil, repeats: false)
@@ -61,8 +59,6 @@ class ViewController: UIViewController {
         
         // initialize bluetooth
         serial
-        
-        print ("asdasdasdads")
         
        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updates), userInfo: nil, repeats: true)
         

@@ -17,8 +17,6 @@
 		824404A41BA3BE88005DDDD7 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824404A31BA3BE88005DDDD7 /* PlayerCell.swift */; };
 		826274A21BA3F98000E5E8BE /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826274A11BA3F98000E5E8BE /* PlayerDetailsViewController.swift */; };
 		826274A41BA4321A00E5E8BE /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826274A31BA4321A00E5E8BE /* GamePickerViewController.swift */; };
-		F148C7DD1DBFFB0300368490 /* btImg.png in Resources */ = {isa = PBXBuildFile; fileRef = F148C7DC1DBFFB0300368490 /* btImg.png */; };
-		F148C7DF1DBFFB5E00368490 /* wifiImg.png in Resources */ = {isa = PBXBuildFile; fileRef = F148C7DE1DBFFB5E00368490 /* wifiImg.png */; };
 		F148C7E11DC0001F00368490 /* offline.png in Resources */ = {isa = PBXBuildFile; fileRef = F148C7E01DC0001F00368490 /* offline.png */; };
 		F1EDC07E1CFBF5F9004915B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EDC07D1CFBF5F9004915B8 /* ViewController.swift */; };
 		F1EDC0831CFC9317004915B8 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EDC07F1CFC9317004915B8 /* ysocket.swift */; };
@@ -42,8 +40,6 @@
 		824404A31BA3BE88005DDDD7 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		826274A11BA3F98000E5E8BE /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 		826274A31BA4321A00E5E8BE /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
-		F148C7DC1DBFFB0300368490 /* btImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btImg.png; sourceTree = "<group>"; };
-		F148C7DE1DBFFB5E00368490 /* wifiImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifiImg.png; sourceTree = "<group>"; };
 		F148C7E01DC0001F00368490 /* offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline.png; sourceTree = "<group>"; };
 		F1EDC0751CFBF50D004915B8 /* Ratings-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ratings-Bridging-Header.h"; sourceTree = "<group>"; };
 		F1EDC07D1CFBF5F9004915B8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,12 +89,10 @@
 				F1EDC0811CFC9317004915B8 /* ytcpsocket.h */,
 				F1EDC0821CFC9317004915B8 /* ytcpsocket.swift */,
 				8244048B1BA2816A005DDDD7 /* AppDelegate.swift */,
-				F148C7DE1DBFFB5E00368490 /* wifiImg.png */,
 				F148C7E01DC0001F00368490 /* offline.png */,
 				8244048F1BA2816A005DDDD7 /* Main.storyboard */,
 				F1EDC0861CFD5FA5004915B8 /* ManualViewController.swift */,
 				F1EDC07D1CFBF5F9004915B8 /* ViewController.swift */,
-				F148C7DC1DBFFB0300368490 /* btImg.png */,
 				8244049D1BA3BB4A005DDDD7 /* PlayersViewController.swift */,
 				824404A31BA3BE88005DDDD7 /* PlayerCell.swift */,
 				826274A11BA3F98000E5E8BE /* PlayerDetailsViewController.swift */,
@@ -182,10 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				824404961BA2816A005DDDD7 /* LaunchScreen.storyboard in Resources */,
-				F148C7DF1DBFFB5E00368490 /* wifiImg.png in Resources */,
 				824404931BA2816A005DDDD7 /* Assets.xcassets in Resources */,
 				824404911BA2816A005DDDD7 /* Main.storyboard in Resources */,
-				F148C7DD1DBFFB0300368490 /* btImg.png in Resources */,
 				F148C7E11DC0001F00368490 /* offline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
