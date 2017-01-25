@@ -101,15 +101,13 @@ class ViewController: UIViewController {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
-        // this one is for hh:mm
+        // For hh:mm
         let str = dateFormatter.string(from: date)
        // print(str)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let wday = dateFormatter.string(from: date)
         
         let weekday = getDayOfWeek(wday)! - 1
-      //  print("weekday: \(String(weekday!)) and Time: \(str)")
-        
         let msg:String = "SETT \(String(weekday)) \(str)"
       //  let msg:String = "SETT \(String(weekday)) 9:26:00"
         print(msg)

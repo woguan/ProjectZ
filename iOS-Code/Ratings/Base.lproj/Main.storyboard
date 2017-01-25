@@ -189,7 +189,6 @@
         <!--Navigation Controller-->
         <scene sceneID="bAY-L5-DaC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2lT-nw-NrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Qdg-Mx-ftR" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X5H-x8-1eU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -199,13 +198,14 @@
                         <segue destination="bcr-Wk-HLa" kind="relationship" relationship="rootViewController" id="IVg-91-vUw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lT-nw-NrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2220" y="-362"/>
         </scene>
-        <!--View Controller-->
+        <!--New Setting View Controller-->
         <scene sceneID="Spf-2X-9I5">
             <objects>
-                <viewController id="twk-mA-8Mv" sceneMemberID="viewController">
+                <viewController id="twk-mA-8Mv" customClass="NewSettingViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eKQ-EW-6FP"/>
                         <viewControllerLayoutGuide type="bottom" id="Jd2-Pa-Yx2"/>
@@ -229,7 +229,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qdg-Mx-ftR" kind="presentation" id="RYM-nD-Mdg"/>
+                                    <segue destination="Qdg-Mx-ftR" kind="presentation" identifier="" id="RYM-nD-Mdg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -238,13 +238,14 @@
                     <navigationItem key="navigationItem" id="ltH-rQ-4qS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCk-S8-0ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1ni-sY-EZh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2908" y="-362"/>
         </scene>
         <!--Configure-->
         <scene sceneID="rnd-KA-7PL">
             <objects>
-                <viewController title="Configure" id="bcr-Wk-HLa" sceneMemberID="viewController">
+                <viewController title="Configure" id="bcr-Wk-HLa" customClass="InitialSetupViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="raK-P2-gBd"/>
                         <viewControllerLayoutGuide type="bottom" id="l33-sG-7Bf"/>
@@ -265,7 +266,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ic_rotate_left_48pt"/>
                                 <connections>
-                                    <segue destination="6C3-iW-uHx" kind="show" id="OUk-Mq-4ff"/>
+                                    <action selector="counterClock:" destination="bcr-Wk-HLa" eventType="touchUpInside" id="nqV-H0-86e"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrS-Dg-pCx">
@@ -273,17 +274,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ic_rotate_right_48pt"/>
                                 <connections>
-                                    <segue destination="6C3-iW-uHx" kind="show" id="pjk-yF-aSr"/>
+                                    <action selector="clockwise:" destination="bcr-Wk-HLa" eventType="touchUpInside" id="jQz-No-vYV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="YL1-fi-97Q"/>
+                    <connections>
+                        <segue destination="6C3-iW-uHx" kind="show" identifier="configuration" id="Bvi-4o-Oqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCI-mt-kxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1540" y="-362"/>
+            <point key="canvasLocation" x="-1502" y="-362"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MpI-Q9-JBR">
@@ -301,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="-790" y="-362"/>
         </scene>
-        <!--View Controller-->
+        <!--Configuration View Controller-->
         <scene sceneID="jbg-5y-9nP">
             <objects>
-                <viewController id="r5Y-5I-Bc6" sceneMemberID="viewController">
+                <viewController id="r5Y-5I-Bc6" customClass="ConfigurationViewController" customModule="ProjZ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H8e-oN-eHC"/>
                         <viewControllerLayoutGuide type="bottom" id="eLq-b5-XMU"/>
@@ -350,7 +354,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LiG-51-4Z7"/>
+                    <navigationItem key="navigationItem" id="LiG-51-4Z7">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="chG-Bc-lf8">
+                            <connections>
+                                <segue destination="1ni-sY-EZh" kind="unwind" unwindAction="unwindToNewSettingViewController:" id="vT0-OH-jUu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="189-TP-3JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,19 +401,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-Rg-O1Q">
-                                            <rect key="frame" x="28" y="8" width="286" height="43"/>
+                                            <rect key="frame" x="28" y="8" width="287" height="43"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wlU-SE-qOz">
-                                                    <rect key="frame" x="0.0" y="3" width="286" height="37.5"/>
+                                                    <rect key="frame" x="0.0" y="3" width="287" height="37.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qU2-sC-RPL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSo-Ls-uVG">
-                                                            <rect key="frame" x="0.0" y="20.5" width="286" height="17"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="287" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -441,7 +451,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Automations" id="jlp-Im-Eta">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="qbr-rU-0sB">
+                        <barButtonItem key="leftBarButtonItem" id="qbr-rU-0sB">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Qr-A3-yvQ">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -567,7 +577,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziX-28-7DC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gtm-r7-MYE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="-81"/>
+            <point key="canvasLocation" x="2538" y="-81"/>
         </scene>
         <!--Choose Game-->
         <scene sceneID="pT5-7j-RNg">
@@ -603,7 +613,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LLT-wg-zI1">
-                        <barButtonItem key="rightBarButtonItem" title="Done" style="plain" id="tsP-9a-3xS">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="tsP-9a-3xS">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iuK-YU-uwZ">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -619,7 +629,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fw1-lD-5Rr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TxS-qM-b2T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3756" y="-81"/>
+            <point key="canvasLocation" x="3841" y="-81"/>
         </scene>
         <!--Automation-->
         <scene sceneID="hmV-gF-SBk">
@@ -686,7 +696,4 @@
         <image name="offline.png" width="100" height="100"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="pjk-yF-aSr"/>
-    </inferredMetricsTieBreakers>
 </document>
