@@ -144,7 +144,7 @@
                                 </constraints>
                                 <state key="normal" title="Offline Mode" image="offline.png"/>
                                 <connections>
-                                    <segue destination="twk-mA-8Mv" kind="presentation" id="TPQ-VA-rmA"/>
+                                    <action selector="debugBut:" destination="sdZ-Jk-y7s" eventType="touchUpInside" id="9Xl-iz-2C7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-kq-vvp">
@@ -178,7 +178,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="juP-dS-PZk" kind="show" identifier="asdf" id="8WV-Au-GD4"/>
+                        <segue destination="juP-dS-PZk" kind="show" identifier="mainmenu" id="8WV-Au-GD4"/>
+                        <segue destination="twk-mA-8Mv" kind="presentation" identifier="newSetUp" id="TBa-13-rWr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thW-G4-FD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -353,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="189-TP-3JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="-362"/>
+            <point key="canvasLocation" x="-20" y="-828"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z1L-OR-RdH">
