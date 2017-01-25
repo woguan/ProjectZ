@@ -36,6 +36,7 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
         }
     }
     
+    // hi diego
     var bleService: BTService? {
         didSet {
             if let service = self.bleService {
