@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ACD2BD95FA21CBE4C79478F42D440F28A1EC5081",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4D8ECB02EE1AC8075CF61BE77D0029681C704F59" : 9223372036854775807,
+    "ACD2BD95FA21CBE4C79478F42D440F28A1EC5081" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A5711E4A-7579-4D1B-961F-E80297F1E880",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4D8ECB02EE1AC8075CF61BE77D0029681C704F59" : "game\/cse145\/",
+    "ACD2BD95FA21CBE4C79478F42D440F28A1EC5081" : "ProjectZ\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ProjZ",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS-Code\/ProjZ.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ocawa\/iosPZ.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4D8ECB02EE1AC8075CF61BE77D0029681C704F59"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/woguan\/ProjectZ.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ACD2BD95FA21CBE4C79478F42D440F28A1EC5081"
+    }
+  ]
+}
