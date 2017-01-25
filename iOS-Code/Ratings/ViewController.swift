@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             }
     }
     
-    
+    // test
     
     @IBAction func blueBut(_ sender: UIButton) {
         serial.startScanning()
