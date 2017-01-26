@@ -10,35 +10,57 @@ import UIKit
 
 import Darwin.C
 
+
+
 //socket
 let client:TCPClient = TCPClient(addr: "172.20.10.4", port: 80)
 
 class ViewController: UIViewController {
 //var manualViewController:ManualViewController?
     
+    
+    @IBAction func debugBut(_ sender: UIButton) {
+        nextScene(value: .hasConnection)
+    }
     @IBAction func wifiBut(_ sender: UIButton) {
         let (success,errmsg)=client.connect(timeout: 1)
             if success{
                 print("Successfully connected via WiFi")
                 client.connected = true
                 //update time of arduino
-                
-                //move to next scene
-                self.performSegue(withIdentifier: "asdf", sender: nil)
-                
+                //updateArduinoTime()
+                nextScene(value: .hasConnection)
             }else{
                 print(errmsg)
+                nextScene(value: .noConnection)
             }
     }
-    
-    // test
     
     @IBAction func blueBut(_ sender: UIButton) {
         serial.startScanning()
         Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ViewController.connectTimeOut), userInfo: nil, repeats: false)
         
-         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updates), userInfo: nil, repeats: false)
+        // Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updates), userInfo: nil, repeats: false)
         
+    }
+    
+    enum Connection{
+        case hasConnection
+        case noConnection
+    }
+    
+    func nextScene (value connection:Connection){
+        switch(connection){
+        case .hasConnection:
+            if NewUser {
+                self.performSegue(withIdentifier: "newSetUp", sender: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "mainmenu", sender: nil)
+            }
+        case .noConnection:
+                print("FAILED TO CONNECT TO DEVICE")
+        }
     }
     
     func connectTimeOut(){
@@ -48,9 +70,11 @@ class ViewController: UIViewController {
              updateArduinoTime()
             // move to next scene
             self.performSegue(withIdentifier: "asdf", sender: nil)
+            nextScene(value: .hasConnection)
         }
         else{
             print("Bluetooth failed to connect")
+            nextScene(value: .noConnection)
         }
         
     }
@@ -62,9 +86,7 @@ class ViewController: UIViewController {
         // initialize bluetooth
         serial
         
-        print ("asdasdasdads")
-        
-       Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updates), userInfo: nil, repeats: true)
+     //  Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updates), userInfo: nil, repeats: true)
         
     }
     
@@ -79,15 +101,13 @@ class ViewController: UIViewController {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
-        // this one is for hh:mm
+        // For hh:mm
         let str = dateFormatter.string(from: date)
        // print(str)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let wday = dateFormatter.string(from: date)
         
         let weekday = getDayOfWeek(wday)! - 1
-      //  print("weekday: \(String(weekday!)) and Time: \(str)")
-        
         let msg:String = "SETT \(String(weekday)) \(str)"
       //  let msg:String = "SETT \(String(weekday)) 9:26:00"
         print(msg)
