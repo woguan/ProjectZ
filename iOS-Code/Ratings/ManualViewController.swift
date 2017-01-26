@@ -49,7 +49,7 @@ class ManualViewController: UIViewController {
     }
     
     @IBAction func sliderValueHasChanged(_ sender: UISlider) {
-        print(sender.value)
+       // print(sender.value)
         amountSlide = Int(sender.value)
     }
     

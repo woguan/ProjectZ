@@ -32,7 +32,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gah-0Z-n20">
                                 <rect key="frame" x="317" y="70" width="30" height="30"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAm-dJ-bYn">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAm-dJ-bYn">
                                 <rect key="frame" x="23" y="260" width="149" height="30"/>
                                 <state key="normal" title="Set max counterclock"/>
                                 <connections>
@@ -46,7 +46,7 @@
                                     <action selector="ClockWise:" destination="bMG-md-rfZ" eventType="touchUpInside" id="bSs-BY-4vF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2N-Tk-imm">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2N-Tk-imm">
                                 <rect key="frame" x="228" y="260" width="127" height="30"/>
                                 <state key="normal" title="Set max clockwise"/>
                                 <connections>
@@ -506,11 +506,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Automations" id="jlp-Im-Eta">
                         <barButtonItem key="leftBarButtonItem" id="qbr-rU-0sB">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Qr-A3-yvQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Qr-A3-yvQ" userLabel="Submit">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Sync"/>
+                                <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="Sync:" destination="xNq-fa-oDe" eventType="touchUpInside" id="gD5-OC-38a"/>
                                 </connections>
