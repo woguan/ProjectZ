@@ -24,11 +24,11 @@ class InitialSettingViewController: UIViewController {
 
     
     @IBAction func unwindToNewSettingViewController(_ segue: UIStoryboardSegue){
-     print ("unwinded")
-        
-        
+     print ("Unwind to first screen.")
         DirectionChoice = .None
         
         // Todo: RESET ALL SMIN/SMAX OF DEVICE 
+        
+        print ("All settings to arduino should be Reset at this point.")
     }
 }

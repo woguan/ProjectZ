@@ -18,11 +18,15 @@ class ConfigurationViewController: UIViewController {
     
     @IBOutlet weak var clockwiseButton: UIButton!
     
+    
+    
     @IBAction func Counterclock(_ sender: UIButton) {
         print ("counter clockwise pressed")
+        // Todo: Ask arduino to rotate
     }
     @IBAction func Clockwise(_ sender: UIButton) {
         print ("clockwise pressed")
+        // Todo: Ask Arduino to rotate
     }
     
     @IBAction func submitSetting(_ sender: UIButton) {
@@ -33,6 +37,8 @@ class ConfigurationViewController: UIViewController {
             
             })
             
+            // Todo: Update Arduino maximum rotation ( the one that is left out )
+            print ("At this point... Arduino is fully set up.")
             
             let alert = UIAlertController(title: "Notice", message: "This is debug mode... All Data passed successfully", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(okayButton)
@@ -54,9 +60,15 @@ class ConfigurationViewController: UIViewController {
         }
         switch option {
         case .Clockwise:
+            print("User choice: Clockwise... CounterClockwise Button is disabled")
             counterclockButton.isEnabled = false
+            // Todo: Update arduino maximum CounterClockwise
+            print("At this point, Arduino will know the maximum CounterClockwise")
         case .Counterclockwise:
+            print("User choice: CounterClockwise... Clockwise Button is disabled")
             clockwiseButton.isEnabled = false
+            // Todo: Update arduino maximum CounterClockwise
+            print("At this point, Arduino will know the maximum Clockwise")
         case .None:
             print ("should not reach here")
             fatalError()
