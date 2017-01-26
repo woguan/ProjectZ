@@ -14,18 +14,23 @@ import UIKit
 class ConfigurationViewController: UIViewController {
     var option:Choice!
     
+    var amountSlide:Int = 50
+    
     @IBOutlet weak var counterclockButton: UIButton!
     
     @IBOutlet weak var clockwiseButton: UIButton!
     
     
+    @IBAction func sliderAction(_ sender: UISlider) {
+        amountSlide = Int(sender.value)
+    }
     
     @IBAction func Counterclock(_ sender: UIButton) {
-        print ("counter clockwise pressed")
+        print ("Counter Clockwise trigged. Rotating Value: \(amountSlide)")
         // Todo: Ask arduino to rotate
     }
     @IBAction func Clockwise(_ sender: UIButton) {
-        print ("clockwise pressed")
+        print ("Clockwise Trigger. Rotating Value: \(amountSlide)")
         // Todo: Ask Arduino to rotate
     }
     
