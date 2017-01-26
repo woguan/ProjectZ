@@ -356,6 +356,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="submitSetting:" destination="r5Y-5I-Bc6" eventType="touchUpInside" id="XLq-sY-uSE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,6 +373,7 @@
                     <connections>
                         <outlet property="clockwiseButton" destination="qLG-E0-RgA" id="a5z-sl-RXi"/>
                         <outlet property="counterclockButton" destination="4bm-Sk-pVK" id="TM4-ZV-Tz8"/>
+                        <segue destination="juP-dS-PZk" kind="presentation" identifier="setupDone" id="PgH-9k-uHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="189-TP-3JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -706,4 +710,7 @@
         <image name="offline.png" width="100" height="100"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PgH-9k-uHt"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,3 +16,5 @@ enum Choice{
 var NewUser:Bool = true
 
 var DirectionChoice:Choice!
+
+var DebugMode:Bool = true

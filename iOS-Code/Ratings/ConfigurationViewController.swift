@@ -25,6 +25,23 @@ class ConfigurationViewController: UIViewController {
         print ("clockwise pressed")
     }
     
+    @IBAction func submitSetting(_ sender: UIButton) {
+        if (DebugMode){
+            let okayButton = UIAlertAction(title: "OK", style: .cancel, handler: {(alert) -> Void in
+            
+           self.performSegue(withIdentifier: "setupDone", sender: nil)
+            
+            })
+            
+            
+            let alert = UIAlertController(title: "Notice", message: "This is debug mode... All Data passed successfully", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(okayButton)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
+        
+    }
     func setUserChoice(option:Choice){
         self.option = option
     }
