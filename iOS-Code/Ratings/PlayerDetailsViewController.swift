@@ -52,7 +52,7 @@ class PlayerDetailsViewController: UITableViewController {
         dateFormatter.dateFormat = "HH:mm"
         stringDate = dateFormatter.string(from: date!)
         
-        print(stringDate)
+       // print(stringDate)
     }
     
     var floatPos:Float = 0.0
