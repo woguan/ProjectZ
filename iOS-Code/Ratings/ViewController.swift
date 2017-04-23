@@ -9,7 +9,8 @@
 import UIKit
 
 import Darwin.C
-
+import Firebase
+import FirebaseDatabase
 
 
 //socket
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
             //update time of arduino
              updateArduinoTime()
             // move to next scene
-            self.performSegue(withIdentifier: "asdf", sender: nil)
+            self.performSegue(withIdentifier: "newSetUp", sender: nil)
             nextScene(value: .hasConnection)
         }
         else{
@@ -87,6 +88,23 @@ class ViewController: UIViewController {
         serial
         
      //  Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updates), userInfo: nil, repeats: true)
+        
+        // testing database:
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        
+        let ref = FIRDatabase.database().reference(fromURL: "https://projectz-a9967.firebaseio.com/").child("user")
+        ref.child(userID!).observe(.value, with: { (snapshot) in
+            if let dict = snapshot.value as? [String:AnyObject]{
+//                for val in dict{
+//                    print (val)
+//                }
+                currentUserEmail = dict["Email"] as? String
+                currentHardwareUUID = dict["MachineUUID"] as? String
+            }
+            else{
+                print("failed with: ", snapshot.value ?? "Failed")
+            }
+        })
         
     }
     

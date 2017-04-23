@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3A7A4C0259D29140ECC2E0 /* Pods_ProjZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63943B971CC8790F62322CC8 /* Pods_ProjZ.framework */; };
 		8244048C1BA2816A005DDDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244048B1BA2816A005DDDD7 /* AppDelegate.swift */; };
 		824404911BA2816A005DDDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8244048F1BA2816A005DDDD7 /* Main.storyboard */; };
 		824404931BA2816A005DDDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824404921BA2816A005DDDD7 /* Assets.xcassets */; };
 		824404961BA2816A005DDDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824404941BA2816A005DDDD7 /* LaunchScreen.storyboard */; };
-		8244049E1BA3BB4A005DDDD7 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244049D1BA3BB4A005DDDD7 /* PlayersViewController.swift */; };
-		824404A01BA3BB79005DDDD7 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244049F1BA3BB79005DDDD7 /* Player.swift */; };
+		8244049E1BA3BB4A005DDDD7 /* SchedulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244049D1BA3BB4A005DDDD7 /* SchedulesViewController.swift */; };
+		824404A01BA3BB79005DDDD7 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8244049F1BA3BB79005DDDD7 /* Schedule.swift */; };
 		824404A21BA3BBC9005DDDD7 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824404A11BA3BBC9005DDDD7 /* SampleData.swift */; };
-		824404A41BA3BE88005DDDD7 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824404A31BA3BE88005DDDD7 /* PlayerCell.swift */; };
-		826274A21BA3F98000E5E8BE /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826274A11BA3F98000E5E8BE /* PlayerDetailsViewController.swift */; };
-		826274A41BA4321A00E5E8BE /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826274A31BA4321A00E5E8BE /* GamePickerViewController.swift */; };
+		824404A41BA3BE88005DDDD7 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824404A31BA3BE88005DDDD7 /* ScheduleCell.swift */; };
+		826274A21BA3F98000E5E8BE /* ScheduleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826274A11BA3F98000E5E8BE /* ScheduleDetailsViewController.swift */; };
+		826274A41BA4321A00E5E8BE /* DayPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826274A31BA4321A00E5E8BE /* DayPickerViewController.swift */; };
+		F11085311E4BA22B007241EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11085301E4BA22B007241EB /* LoginViewController.swift */; };
+		F11085331E4BA23E007241EB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11085321E4BA23E007241EB /* RegistrationViewController.swift */; };
 		F13C65081E394D3900CABD4E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C65071E394D3900CABD4E /* Settings.swift */; };
 		F13C650A1E39533500CABD4E /* InitialSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C65091E39533500CABD4E /* InitialSettingViewController.swift */; };
 		F13C650C1E39593900CABD4E /* UserChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C650B1E39593900CABD4E /* UserChoiceViewController.swift */; };
 		F13C650E1E395A8F00CABD4E /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C650D1E395A8F00CABD4E /* ConfigurationViewController.swift */; };
 		F148C7E11DC0001F00368490 /* offline.png in Resources */ = {isa = PBXBuildFile; fileRef = F148C7E01DC0001F00368490 /* offline.png */; };
+		F18916421E4A5EB300716146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F18916411E4A5EB300716146 /* GoogleService-Info.plist */; };
 		F1EDC07E1CFBF5F9004915B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EDC07D1CFBF5F9004915B8 /* ViewController.swift */; };
 		F1EDC0831CFC9317004915B8 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EDC07F1CFC9317004915B8 /* ysocket.swift */; };
 		F1EDC0841CFC9317004915B8 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = F1EDC0801CFC9317004915B8 /* ytcpsocket.c */; };
@@ -32,23 +36,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63943B971CC8790F62322CC8 /* Pods_ProjZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		824404881BA2816A005DDDD7 /* ProjZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8244048B1BA2816A005DDDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824404901BA2816A005DDDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		824404921BA2816A005DDDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		824404951BA2816A005DDDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		824404971BA2816A005DDDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8244049D1BA3BB4A005DDDD7 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
-		8244049F1BA3BB79005DDDD7 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8244049D1BA3BB4A005DDDD7 /* SchedulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulesViewController.swift; sourceTree = "<group>"; };
+		8244049F1BA3BB79005DDDD7 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		824404A11BA3BBC9005DDDD7 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		824404A31BA3BE88005DDDD7 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
-		826274A11BA3F98000E5E8BE /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
-		826274A31BA4321A00E5E8BE /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
+		824404A31BA3BE88005DDDD7 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		826274A11BA3F98000E5E8BE /* ScheduleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailsViewController.swift; sourceTree = "<group>"; };
+		826274A31BA4321A00E5E8BE /* DayPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPickerViewController.swift; sourceTree = "<group>"; };
+		CF1FB75C287A91259FC5D85D /* Pods-ProjZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjZ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjZ/Pods-ProjZ.debug.xcconfig"; sourceTree = "<group>"; };
+		F11085301E4BA22B007241EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F11085321E4BA23E007241EB /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		F11085341E4CD6A6007241EB /* ProjZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjZ.entitlements; sourceTree = "<group>"; };
 		F13C65071E394D3900CABD4E /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F13C65091E39533500CABD4E /* InitialSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSettingViewController.swift; sourceTree = "<group>"; };
 		F13C650B1E39593900CABD4E /* UserChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChoiceViewController.swift; sourceTree = "<group>"; };
 		F13C650D1E395A8F00CABD4E /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		F145FAC573AAD8245722C994 /* Pods-ProjZ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjZ.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjZ/Pods-ProjZ.release.xcconfig"; sourceTree = "<group>"; };
 		F148C7E01DC0001F00368490 /* offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline.png; sourceTree = "<group>"; };
+		F18916411E4A5EB300716146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1EDC0751CFBF50D004915B8 /* Ratings-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ratings-Bridging-Header.h"; sourceTree = "<group>"; };
 		F1EDC07D1CFBF5F9004915B8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1EDC07F1CFC9317004915B8 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
@@ -65,17 +76,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3A7A4C0259D29140ECC2E0 /* Pods_ProjZ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B389B7C830165DB4424A31C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF1FB75C287A91259FC5D85D /* Pods-ProjZ.debug.xcconfig */,
+				F145FAC573AAD8245722C994 /* Pods-ProjZ.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		63BE12E595168B72207C8DF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63943B971CC8790F62322CC8 /* Pods_ProjZ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8244047F1BA2816A005DDDD7 = {
 			isa = PBXGroup;
 			children = (
+				F11085341E4CD6A6007241EB /* ProjZ.entitlements */,
 				8244048A1BA2816A005DDDD7 /* ProjectZ */,
 				824404891BA2816A005DDDD7 /* Products */,
+				4B389B7C830165DB4424A31C /* Pods */,
+				63BE12E595168B72207C8DF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,21 +131,23 @@
 				8244048B1BA2816A005DDDD7 /* AppDelegate.swift */,
 				F148C7E01DC0001F00368490 /* offline.png */,
 				8244048F1BA2816A005DDDD7 /* Main.storyboard */,
+				F11085301E4BA22B007241EB /* LoginViewController.swift */,
+				F11085321E4BA23E007241EB /* RegistrationViewController.swift */,
 				F13C650D1E395A8F00CABD4E /* ConfigurationViewController.swift */,
 				F13C650B1E39593900CABD4E /* UserChoiceViewController.swift */,
 				F13C65091E39533500CABD4E /* InitialSettingViewController.swift */,
 				F1EDC0861CFD5FA5004915B8 /* ManualViewController.swift */,
 				F1EDC07D1CFBF5F9004915B8 /* ViewController.swift */,
-				F13C65071E394D3900CABD4E /* Settings.swift */,
-				8244049D1BA3BB4A005DDDD7 /* PlayersViewController.swift */,
-				824404A31BA3BE88005DDDD7 /* PlayerCell.swift */,
-				826274A11BA3F98000E5E8BE /* PlayerDetailsViewController.swift */,
-				826274A31BA4321A00E5E8BE /* GamePickerViewController.swift */,
+				8244049D1BA3BB4A005DDDD7 /* SchedulesViewController.swift */,
+				824404A31BA3BE88005DDDD7 /* ScheduleCell.swift */,
+				826274A11BA3F98000E5E8BE /* ScheduleDetailsViewController.swift */,
+				826274A31BA4321A00E5E8BE /* DayPickerViewController.swift */,
 				824404A51BA3C699005DDDD7 /* Model */,
 				824404921BA2816A005DDDD7 /* Assets.xcassets */,
 				824404941BA2816A005DDDD7 /* LaunchScreen.storyboard */,
 				824404971BA2816A005DDDD7 /* Info.plist */,
 				F1EDC0751CFBF50D004915B8 /* Ratings-Bridging-Header.h */,
+				F18916411E4A5EB300716146 /* GoogleService-Info.plist */,
 			);
 			name = ProjectZ;
 			path = Ratings;
@@ -122,7 +156,8 @@
 		824404A51BA3C699005DDDD7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8244049F1BA3BB79005DDDD7 /* Player.swift */,
+				F13C65071E394D3900CABD4E /* Settings.swift */,
+				8244049F1BA3BB79005DDDD7 /* Schedule.swift */,
 				824404A11BA3BBC9005DDDD7 /* SampleData.swift */,
 			);
 			name = Model;
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8244049A1BA2816A005DDDD7 /* Build configuration list for PBXNativeTarget "ProjZ" */;
 			buildPhases = (
+				E6EE75551332091F32385A47 /* 📦 Check Pods Manifest.lock */,
 				824404841BA2816A005DDDD7 /* Sources */,
 				824404851BA2816A005DDDD7 /* Frameworks */,
 				824404861BA2816A005DDDD7 /* Resources */,
+				7916824C83F79D53CC96A942 /* 📦 Embed Pods Frameworks */,
+				B599980DE1552FA8120E8BF0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +200,11 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 96342UP57T;
 						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -190,12 +233,61 @@
 			files = (
 				824404961BA2816A005DDDD7 /* LaunchScreen.storyboard in Resources */,
 				824404931BA2816A005DDDD7 /* Assets.xcassets in Resources */,
+				F18916421E4A5EB300716146 /* GoogleService-Info.plist in Resources */,
 				824404911BA2816A005DDDD7 /* Main.storyboard in Resources */,
 				F148C7E11DC0001F00368490 /* offline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7916824C83F79D53CC96A942 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjZ/Pods-ProjZ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B599980DE1552FA8120E8BF0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjZ/Pods-ProjZ-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6EE75551332091F32385A47 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		824404841BA2816A005DDDD7 /* Sources */ = {
@@ -204,22 +296,24 @@
 			files = (
 				F13C650A1E39533500CABD4E /* InitialSettingViewController.swift in Sources */,
 				F1EDC0851CFC9317004915B8 /* ytcpsocket.swift in Sources */,
-				824404A41BA3BE88005DDDD7 /* PlayerCell.swift in Sources */,
+				824404A41BA3BE88005DDDD7 /* ScheduleCell.swift in Sources */,
 				F1EDC07E1CFBF5F9004915B8 /* ViewController.swift in Sources */,
-				824404A01BA3BB79005DDDD7 /* Player.swift in Sources */,
+				F11085311E4BA22B007241EB /* LoginViewController.swift in Sources */,
+				824404A01BA3BB79005DDDD7 /* Schedule.swift in Sources */,
 				F13C650E1E395A8F00CABD4E /* ConfigurationViewController.swift in Sources */,
 				F1EDC0831CFC9317004915B8 /* ysocket.swift in Sources */,
 				F1EDC0841CFC9317004915B8 /* ytcpsocket.c in Sources */,
-				826274A41BA4321A00E5E8BE /* GamePickerViewController.swift in Sources */,
+				826274A41BA4321A00E5E8BE /* DayPickerViewController.swift in Sources */,
 				F13C650C1E39593900CABD4E /* UserChoiceViewController.swift in Sources */,
-				826274A21BA3F98000E5E8BE /* PlayerDetailsViewController.swift in Sources */,
+				826274A21BA3F98000E5E8BE /* ScheduleDetailsViewController.swift in Sources */,
 				8244048C1BA2816A005DDDD7 /* AppDelegate.swift in Sources */,
 				F13C65081E394D3900CABD4E /* Settings.swift in Sources */,
+				F11085331E4BA23E007241EB /* RegistrationViewController.swift in Sources */,
 				824404A21BA3BBC9005DDDD7 /* SampleData.swift in Sources */,
 				F1EDC0871CFD5FA5004915B8 /* ManualViewController.swift in Sources */,
 				F1EDC08B1CFD668A004915B8 /* BTService.swift in Sources */,
 				F1EDC08A1CFD668A004915B8 /* Bluetooth.swift in Sources */,
-				8244049E1BA3BB4A005DDDD7 /* PlayersViewController.swift in Sources */,
+				8244049E1BA3BB4A005DDDD7 /* SchedulesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,16 +427,18 @@
 		};
 		8244049B1BA2816A005DDDD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF1FB75C287A91259FC5D85D /* Pods-ProjZ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ProjZ.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 96342UP57T;
 				INFOPLIST_FILE = Ratings/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = diegos.com;
+				PRODUCT_BUNDLE_IDENTIFIER = ProjZ.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ratings/Ratings-Bridging-Header.h";
@@ -354,16 +450,18 @@
 		};
 		8244049C1BA2816A005DDDD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F145FAC573AAD8245722C994 /* Pods-ProjZ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ProjZ.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 96342UP57T;
 				INFOPLIST_FILE = Ratings/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = diegos.com;
+				PRODUCT_BUNDLE_IDENTIFIER = ProjZ.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Ratings/Ratings-Bridging-Header.h";
