@@ -107,10 +107,12 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
                print ("User Registered Successfully")
                 
                 // updating a database for user
+                
                 guard let user = user else{
                     print("user is nil.")
                     return
                 }
+                
                 let ref = FIRDatabase.database().reference(fromURL: "https://projectz-a9967.firebaseio.com/")
                 
                 let userRef = ref.child("user").child(user.uid)
@@ -131,17 +133,5 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             })
         }
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

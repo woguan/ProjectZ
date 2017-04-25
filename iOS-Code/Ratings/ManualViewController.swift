@@ -48,6 +48,9 @@ class ManualViewController: UIViewController {
         self.performSegue(withIdentifier: "disconnectBack", sender: nil)
     }
     
+    
+    
+    
     @IBAction func sliderValueHasChanged(_ sender: UISlider) {
        // print(sender.value)
         amountSlide = Int(sender.value)
