@@ -11,6 +11,7 @@ import CoreBluetooth
 /* Services & Characteristics UUIDs */
 let BLEServiceUUID = CBUUID(string: "FFE0")
 let PositionCharUUID = CBUUID(string: "FFE1")
+
 let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
 let MachineIdentifier = UUID(uuidString: "D031E051-158B-F550-BC0D-253B59224BD1")
 let DeviceName:String = "sophie"
@@ -40,7 +41,7 @@ class BTService: NSObject, CBPeripheralDelegate {
             peripheral = nil
         }
         
-        // Deallocating therefore send notification
+        // Deallocating send notification
         self.sendBTServiceNotificationWithIsBluetoothConnected(false)
     }
     
@@ -48,8 +49,7 @@ class BTService: NSObject, CBPeripheralDelegate {
     // Mark: - CBPeripheralDelegate
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        let uuidsForBTService: [CBUUID] = [PositionCharUUID]
-        
+
         if (peripheral != self.peripheral) {
             // Wrong Peripheral
             return
@@ -65,9 +65,8 @@ class BTService: NSObject, CBPeripheralDelegate {
         }
         
         for service in peripheral.services! {
-            
             if service.uuid == BLEServiceUUID {
-                peripheral.discoverCharacteristics(uuidsForBTService, for: service)
+                peripheral.discoverCharacteristics([PositionCharUUID], for: service)
             }
         }
     }
@@ -103,10 +102,6 @@ class BTService: NSObject, CBPeripheralDelegate {
             //print(positionCharacteristic.description)
             // Need a mutable var to pass to writeValue function
             var mutablePos = position
-            
-            
-       //    let s = UnsafePointer<UInt8>(UnsafePointer(&mutablePos))
-  
             
             let data = NSData(bytes: &mutablePos, length: MemoryLayout<UInt8>.size)
             

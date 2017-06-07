@@ -58,6 +58,7 @@
                                 <state key="normal" title="Disconnect"/>
                                 <connections>
                                     <action selector="DisconnectAction:" destination="bMG-md-rfZ" eventType="touchUpInside" id="oN5-tn-fOa"/>
+                                    <segue destination="b94-cY-9Bs" kind="unwind" unwindAction="unwindToConnectionView:" id="D7Q-dk-FJs"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l4C-pC-X7N">
@@ -109,8 +110,9 @@
                     <tabBarItem key="tabBarItem" title="Manual" image="second" id="6Vk-Ho-IOR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uL8-pM-fED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b94-cY-9Bs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="915.5" y="1041.5"/>
+            <point key="canvasLocation" x="914.49275362318849" y="1041.0326086956522"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="uZD-mH-DFD">
@@ -197,7 +199,7 @@
                                 <rect key="frame" x="179" y="615" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="iti-Dz-k53" kind="show" id="S2g-Km-mRz"/>
+                                    <segue destination="V6i-se-TFN" kind="show" id="Ivp-JW-SYj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -275,7 +277,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please connect your device" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuX-5t-ubq">
-                                <rect key="frame" x="82" y="20" width="210" height="77"/>
+                                <rect key="frame" x="102" y="66" width="210" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -866,8 +868,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2B-ZG-E49">
                                 <rect key="frame" x="132" y="112" width="151" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="WBT-xY-klj"/>
-                                    <constraint firstAttribute="width" constant="151" id="nFB-MW-m3G"/>
+                                    <constraint firstAttribute="height" constant="35" id="YrZ-AL-1ob"/>
+                                    <constraint firstAttribute="width" constant="151" id="rWC-Gv-iDd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="27"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -923,7 +925,7 @@
                                 <rect key="frame" x="35" y="536" width="344" height="44"/>
                                 <color key="backgroundColor" red="0.13992941380000001" green="0.2016294897" blue="0.2474216223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="yQ3-ul-BaM"/>
+                                    <constraint firstAttribute="height" constant="44" id="oIE-2Y-fNo"/>
                                 </constraints>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -981,27 +983,27 @@
                         </subviews>
                         <color key="backgroundColor" red="0.080770142380000007" green="0.19474005699999999" blue="0.33588591220000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="top" secondItem="A2B-ZG-E49" secondAttribute="bottom" constant="83" id="0SC-nM-Wgi"/>
-                            <constraint firstItem="75C-CA-PgN" firstAttribute="trailing" secondItem="cX4-cD-NN5" secondAttribute="trailing" id="4bs-L1-lm1"/>
-                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="trailing" secondItem="OFs-hO-PgD" secondAttribute="trailing" id="5aq-XB-3dN"/>
-                            <constraint firstItem="OFs-hO-PgD" firstAttribute="top" secondItem="ZMP-4V-mVk" secondAttribute="bottom" constant="27" id="8jq-EO-A8f"/>
-                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="leading" secondItem="vVE-tz-XgB" secondAttribute="leadingMargin" constant="15" id="Deg-xB-WIo"/>
-                            <constraint firstItem="A2B-ZG-E49" firstAttribute="centerX" secondItem="ZMP-4V-mVk" secondAttribute="centerX" id="FZi-xE-gGb"/>
-                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="leading" secondItem="OFs-hO-PgD" secondAttribute="leading" id="NEe-ud-F3f"/>
-                            <constraint firstItem="A2B-ZG-E49" firstAttribute="centerX" secondItem="vVE-tz-XgB" secondAttribute="centerX" id="NcF-2C-9ko"/>
-                            <constraint firstItem="Z1y-55-SDB" firstAttribute="top" secondItem="cX4-cD-NN5" secondAttribute="bottom" constant="156" id="UEb-rs-hV7"/>
-                            <constraint firstItem="l0r-2S-rVY" firstAttribute="top" secondItem="OFs-hO-PgD" secondAttribute="bottom" constant="24" id="UxJ-5K-kCf"/>
-                            <constraint firstItem="OFs-hO-PgD" firstAttribute="leading" secondItem="l0r-2S-rVY" secondAttribute="leading" id="V8J-9q-2oh"/>
-                            <constraint firstItem="l0r-2S-rVY" firstAttribute="top" secondItem="vVE-tz-XgB" secondAttribute="top" constant="373" id="Z7b-Ld-ap6"/>
-                            <constraint firstItem="OFs-hO-PgD" firstAttribute="trailing" secondItem="l0r-2S-rVY" secondAttribute="trailing" id="bmc-qE-KDY"/>
-                            <constraint firstItem="l0r-2S-rVY" firstAttribute="trailing" secondItem="75C-CA-PgN" secondAttribute="trailing" id="brN-QF-7lP"/>
-                            <constraint firstItem="75C-CA-PgN" firstAttribute="top" secondItem="vVE-tz-XgB" secondAttribute="top" constant="436" id="eLU-Eu-Oaj"/>
-                            <constraint firstItem="l0r-2S-rVY" firstAttribute="leading" secondItem="75C-CA-PgN" secondAttribute="leading" id="jED-Sd-B8p"/>
-                            <constraint firstItem="OFs-hO-PgD" firstAttribute="top" secondItem="vVE-tz-XgB" secondAttribute="top" constant="303" id="nvT-5S-wmA"/>
-                            <constraint firstItem="cX4-cD-NN5" firstAttribute="top" secondItem="75C-CA-PgN" secondAttribute="bottom" constant="54" id="wJk-Lg-wIR"/>
-                            <constraint firstItem="75C-CA-PgN" firstAttribute="leading" secondItem="cX4-cD-NN5" secondAttribute="leading" id="wrE-I7-mq1"/>
-                            <constraint firstItem="75C-CA-PgN" firstAttribute="top" secondItem="l0r-2S-rVY" secondAttribute="bottom" constant="17" id="xG2-Qj-Qcx"/>
-                            <constraint firstItem="A2B-ZG-E49" firstAttribute="top" secondItem="SlK-JD-Zor" secondAttribute="bottom" constant="48" id="yLl-tJ-O8B"/>
+                            <constraint firstItem="cX4-cD-NN5" firstAttribute="top" secondItem="75C-CA-PgN" secondAttribute="bottom" constant="54" id="3z9-K2-ilt"/>
+                            <constraint firstItem="75C-CA-PgN" firstAttribute="top" secondItem="vVE-tz-XgB" secondAttribute="top" constant="436" id="5cg-yx-lG2"/>
+                            <constraint firstItem="75C-CA-PgN" firstAttribute="trailing" secondItem="cX4-cD-NN5" secondAttribute="trailing" id="Eun-sN-ekh"/>
+                            <constraint firstItem="OFs-hO-PgD" firstAttribute="leading" secondItem="l0r-2S-rVY" secondAttribute="leading" id="J7m-Qy-kfN"/>
+                            <constraint firstItem="Z1y-55-SDB" firstAttribute="top" secondItem="cX4-cD-NN5" secondAttribute="bottom" constant="156" id="KAj-Qe-aEr"/>
+                            <constraint firstItem="OFs-hO-PgD" firstAttribute="top" secondItem="vVE-tz-XgB" secondAttribute="top" constant="303" id="Kxg-Zj-D0m"/>
+                            <constraint firstItem="75C-CA-PgN" firstAttribute="leading" secondItem="cX4-cD-NN5" secondAttribute="leading" id="LOT-tp-FEo"/>
+                            <constraint firstItem="75C-CA-PgN" firstAttribute="top" secondItem="l0r-2S-rVY" secondAttribute="bottom" constant="17" id="MrU-Xc-3TW"/>
+                            <constraint firstItem="l0r-2S-rVY" firstAttribute="trailing" secondItem="75C-CA-PgN" secondAttribute="trailing" id="OTt-Qv-e2F"/>
+                            <constraint firstItem="A2B-ZG-E49" firstAttribute="centerX" secondItem="ZMP-4V-mVk" secondAttribute="centerX" id="PfD-sP-AR6"/>
+                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="trailing" secondItem="OFs-hO-PgD" secondAttribute="trailing" id="WDI-bw-S0g"/>
+                            <constraint firstItem="OFs-hO-PgD" firstAttribute="top" secondItem="ZMP-4V-mVk" secondAttribute="bottom" constant="27" id="cVV-iS-wuD"/>
+                            <constraint firstItem="A2B-ZG-E49" firstAttribute="top" secondItem="SlK-JD-Zor" secondAttribute="bottom" constant="92" id="gtI-mu-MBN"/>
+                            <constraint firstItem="l0r-2S-rVY" firstAttribute="top" secondItem="OFs-hO-PgD" secondAttribute="bottom" constant="24" id="jbc-Ug-wle"/>
+                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="leading" secondItem="OFs-hO-PgD" secondAttribute="leading" id="oOH-ZW-dDF"/>
+                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="leading" secondItem="vVE-tz-XgB" secondAttribute="leadingMargin" constant="15" id="rBK-vT-wrG"/>
+                            <constraint firstItem="A2B-ZG-E49" firstAttribute="centerX" secondItem="vVE-tz-XgB" secondAttribute="centerX" id="t57-OJ-WfR"/>
+                            <constraint firstItem="l0r-2S-rVY" firstAttribute="top" secondItem="vVE-tz-XgB" secondAttribute="top" constant="373" id="wIS-kK-JOD"/>
+                            <constraint firstItem="OFs-hO-PgD" firstAttribute="trailing" secondItem="l0r-2S-rVY" secondAttribute="trailing" id="yfh-ok-Cc4"/>
+                            <constraint firstItem="l0r-2S-rVY" firstAttribute="leading" secondItem="75C-CA-PgN" secondAttribute="leading" id="ynd-Ya-if3"/>
+                            <constraint firstItem="ZMP-4V-mVk" firstAttribute="top" secondItem="A2B-ZG-E49" secondAttribute="bottom" constant="83" id="zef-9j-cUr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p56-U2-lTi"/>
@@ -1017,22 +1019,6 @@
             </objects>
             <point key="canvasLocation" x="-2013" y="1913"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="vAt-b4-NwT">
-            <objects>
-                <navigationController id="iti-Dz-k53" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kir-Qr-nfx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="V6i-se-TFN" kind="relationship" relationship="rootViewController" id="RKh-M3-qYD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ob2-T0-SQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2013" y="1268"/>
-        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
@@ -1044,7 +1030,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8WV-Au-GD4"/>
         <segue reference="d0u-oX-4P7"/>
+        <segue reference="PgH-9k-uHt"/>
     </inferredMetricsTieBreakers>
 </document>

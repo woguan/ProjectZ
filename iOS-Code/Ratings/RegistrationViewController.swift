@@ -127,6 +127,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
                     // Success updating database
                     print ("Database successfully updated")
                     
+                    // Move user to initial page
+                    self.performSegue(withIdentifier: "segueRegistrationDone", sender: nil)
+                    
                 })
                 
                 

@@ -17,13 +17,9 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
     fileprivate var centralManager: CBCentralManager?
     fileprivate var peripheralBLE: CBPeripheral?
     
-    
-    
     override init() {
         super.init()
-        
-        let centralQueue = DispatchQueue(label: "com.diegowong", attributes: [])
-        centralManager = CBCentralManager(delegate: self, queue: centralQueue)
+            centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
     }
     
     // Use this function to scan for peripherals
@@ -36,7 +32,6 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
         }
     }
     
-    // hi diego
     var bleService: BTService? {
         didSet {
             if let service = self.bleService {
@@ -62,25 +57,22 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
     
     func isConnected() -> Bool{
         if let p = peripheralBLE{
-            if (p.state == CBPeripheralState.disconnected){
+            switch p.state{
+            case .connected:
+                return p.name == DeviceName
+            default:
                 return false
             }
-            else{
-                if (p.name == DeviceName){
-                return true
-                }
-            }
         }
-        
-        
         return false
     }
     
     // MARK: - CBCentralManagerDelegate
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        // Be sure to retain the peripheral or it will fail during connection.
         
+        // Be sure to retain the peripheral or it will fail during connection.
+        print("Check this peripheral: ", peripheral)
         // Validate peripheral information
         if ((peripheral.name == nil) || (peripheral.name == "")) {
             return
@@ -88,6 +80,7 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
         
         // If not already connected to a peripheral, then connect to this one
         if ((self.peripheralBLE == nil) || (self.peripheralBLE?.state == CBPeripheralState.disconnected) || self.peripheralBLE?.identifier != MachineIdentifier) {
+            
             // Retain the peripheral before trying to connect
             self.peripheralBLE = peripheral
             
@@ -97,10 +90,10 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
             // Connect to peripheral
             central.connect(peripheral, options: nil)
         }
+ 
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        
         // Create new service class
         if (peripheral == self.peripheralBLE) {
             self.bleService = BTService(initWithPeripheral: peripheral)
@@ -117,9 +110,6 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
             self.bleService = nil;
             self.peripheralBLE = nil;
         }
-        
-        // Start scanning for new devices
-       // self.startScanning()
     }
     
     // MARK: - Private
@@ -145,13 +135,9 @@ class Bluetooth: NSObject, CBCentralManagerDelegate{
                 
             case CBManagerState.unknown:
                 // Wait for another event
-              
                 break
                 
             case CBManagerState.poweredOn:
-                
-                
-              //  self.centralManager!.scanForPeripheralsWithServices([CBUUID(string:TRANSFER_UUID)], options:[CBCentralManagerScanOptionAllowDuplicatesKey: false])
                 break
             case CBManagerState.resetting:
                 self.clearDevices()

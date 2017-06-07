@@ -45,7 +45,6 @@ class ManualViewController: UIViewController {
         if (serial.isConnected()){
             serial.disconnect()
         }
-        self.performSegue(withIdentifier: "disconnectBack", sender: nil)
     }
     
     
