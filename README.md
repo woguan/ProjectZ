@@ -1,3 +1,3 @@
 # ProjectZ
 
-This Application is used to send signal via wifi/bluetooth to Arduino Uno.
+This Application is used to communicate to Arduino Uni via wifi/bluetooth.
